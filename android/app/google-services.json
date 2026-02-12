@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "47297759745",
+    "project_id": "easysolution-5d8b3",
+    "storage_bucket": "easysolution-5d8b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47297759745:android:b8de7dd52b3c9e08828e00",
+        "android_client_info": {
+          "package_name": "com.ess.indiaonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47297759745-3mnipc7npjd0fpoc1v3dbj0opanerkib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgnfpFkeNOBeSvWX_OhFIPnOxO7Esnhrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47297759745-3mnipc7npjd0fpoc1v3dbj0opanerkib.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47297759745:android:988514c565676450828e00",
+        "android_client_info": {
+          "package_name": "com.essindiaonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47297759745-3mnipc7npjd0fpoc1v3dbj0opanerkib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgnfpFkeNOBeSvWX_OhFIPnOxO7Esnhrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47297759745-3mnipc7npjd0fpoc1v3dbj0opanerkib.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

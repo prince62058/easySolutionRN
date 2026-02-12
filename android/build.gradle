@@ -1,0 +1,67 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        buildToolsVersion = "35.0.0"
+        minSdkVersion = 21
+        compileSdkVersion = 35
+        targetSdkVersion = 35
+
+        // We use NDK 23 which has both M1 support and is the side-by-side NDK version from AGP.
+        ndkVersion = "23.1.7779620"
+
+        kotlinVersion = '1.8.10'
+    }
+    repositories {
+        google()
+        mavenCentral()
+       
+    }
+    dependencies {
+        classpath 'com.google.gms:google-services:4.3.15' //google services
+
+        classpath("com.android.tools.build:gradle:8.1.1")
+        classpath("com.facebook.react:react-native-gradle-plugin")
+       
+    }
+}
+
+// for video cache
+ allprojects {
+     repositories {
+        // mavenCentral()
+        mavenLocal()
+        // jcenter()
+        maven {
+            url 'https://my.pspdfkit.com/maven/'
+        }
+        //  mavenLocal()
+
+        // for phonepe
+        maven {
+            url  "https://phonepe.mycloudrepo.io/public/repositories/phonepe-intentsdk-android"
+       }
+       
+        // for video cache
+        maven {
+            url "$rootDir/../node_modules/react-native-video-cache/android/libs"
+        }
+     }
+ }
+
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty('android')) {
+            if (project.android.namespace == null) {
+                def manifestFile = file("${project.projectDir}/src/main/AndroidManifest.xml")
+                if (manifestFile.exists()) {
+                    def manifestContents = manifestFile.getText('UTF-8')
+                    def matcher = manifestContents =~ /package="([^"]+)"/
+                    if (matcher.find()) {
+                        project.android.namespace = matcher.group(1)
+                    }
+                }
+            }
+        }
+    }
+}
